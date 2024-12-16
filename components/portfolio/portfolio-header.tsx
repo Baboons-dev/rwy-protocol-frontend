@@ -3,7 +3,5 @@ interface PortfolioHeaderProps {
 }
 
 export function PortfolioHeader({ title }: PortfolioHeaderProps) {
-  return (
-    <h1 className="text-3xl font-bold font-mono">{title}</h1>
-  );
+  return <h1 className="text-3xl font-bold text-center">{title}</h1>;
 }

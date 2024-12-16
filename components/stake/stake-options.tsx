@@ -27,24 +27,62 @@ const options = [
 
 export function StakeOptions() {
   return (
-    <div className="grid grid-cols-3 gap-4">
-      {options.map((option) => (
-        <Card
-          key={option.title}
-          className={`p-4 relative ${
-            option.active ? "border-blue-500" : "border-border"
-          }`}
-        >
-          <div className="flex items-center justify-between mb-2">
-            <Badge variant="secondary">{option.multiplier} Multiplier</Badge>
-            <ChevronRight className="h-4 w-4 text-muted-foreground" />
-          </div>
-          <h3 className="font-semibold">{option.title}</h3>
-          <p className="text-sm text-muted-foreground">{option.subtitle}</p>
-          {option.comingSoon && (
-            <Badge className="absolute top-2 right-2">Coming Soon</Badge>
+    <div className="p-[5px] flex items-center">
+      {options.map((option, i) => (
+        <div className="w-full flex">
+          {i !== 0 && (
+            <img
+              src={i === 1 ? "/arrWhite.svg" : "/arrGray.svg"}
+              className="relative z-10 mr-[-22px]"
+              alt="blue"
+            />
           )}
-        </Card>
+          <Card
+            key={option.title}
+            className={`w-full px-[15px] py-[10px] rounded-[15px] relative border-0 shadow-0 ${
+              i == 0 ? "" : "bg-[#F7F8F9]"
+            }`}
+          >
+            <div
+              className={`flex flex-col items-center justify-center ${
+                option.comingSoon ? "" : "gap-4"
+              }`}
+            >
+              <Badge variant={i == 0 ? "secondary" : "destructive"}>
+                {option.multiplier} Multiplier
+              </Badge>
+              <div>
+                <h3
+                  style={{
+                    color: i == 0 ? "#000000" : "#00000059",
+                  }}
+                  className="font-bold text-[16px]"
+                >
+                  {option.title}
+                </h3>
+                <p
+                  style={{
+                    color: i == 0 ? "#00000059" : "#00000033",
+                  }}
+                  className="text-sm font-mono font-semibold text-center text-[#00000059]"
+                >
+                  {option.subtitle}
+                </p>
+                {option.comingSoon && (
+                  <div className="flex items-center justify-center gap-2">
+                    <img src={"/lock.svg"} className="" alt="blue" />
+                    <h3 className="text-center text-[10px] font-mono font-semibold ">
+                      Coming Soon
+                    </h3>
+                  </div>
+                )}
+              </div>
+            </div>
+          </Card>
+          {/* {i === 1 && (
+            <img src="/arrGray.svg" className="relative z-10" alt="blue" />
+          )} */}
+        </div>
       ))}
     </div>
   );

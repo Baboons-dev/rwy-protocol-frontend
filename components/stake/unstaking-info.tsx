@@ -6,23 +6,33 @@ import { Clock } from "lucide-react";
 
 export function UnstakingInfo() {
   return (
-    <Card className="p-6">
-      <div className="flex justify-between items-center">
-        <div className="space-y-1">
-          <h3 className="font-semibold">Unstaking</h3>
-          <div className="flex items-center space-x-2">
-            <Clock className="h-4 w-4" />
-            <span>123,405.0403 CSPR</span>
+    <div className="mt-2 flex flex-col gap-2">
+      <Card className="px-[20px] py-[10px]">
+        <div className="flex justify-between items-center">
+          <div className="flex gap-[10px]">
+            <img src="/loadIcon.svg" alt="looaad" />
+            <h3 className="font-semibold text-[14px] font-mono">
+              123,405.0403 CSPR
+            </h3>
           </div>
-        </div>
-        
-        <div className="text-right space-y-1">
-          <div className="text-sm text-muted-foreground">
+          <span className="text-[10px] font-mono">
             Available in 13h 12m 24s
-          </div>
-          <Button>Claim</Button>
+          </span>
         </div>
-      </div>
-    </Card>
+      </Card>
+      <Card className="px-[20px] w-full h-[45px]">
+        <div className="flex justify-between items-center py-2">
+          <div className="flex gap-[10px]">
+            <img src="/tick.svg" alt="looaad" />
+            <h3 className="font-semibold text-[14px] font-mono">
+              123,405.0403 CSPR
+            </h3>
+          </div>
+          <Button className="w-[86px] h-[30px] bg-[#0B63FF] text-xs">
+            Claim
+          </Button>
+        </div>
+      </Card>
+    </div>
   );
 }
