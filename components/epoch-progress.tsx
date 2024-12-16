@@ -1,6 +1,4 @@
 "use client";
-
-import { Progress } from "@/components/ui/progress";
 import { EpochBadge } from "@/components/ui/epoch-badge";
 
 interface EpochProgressProps {
@@ -22,7 +20,12 @@ export function EpochProgress({
     <div className="w-full lg:w-3/5 pr-4 bg-white rounded-lg shadow-sm">
       <div className="flex items-center justify-between">
         <EpochBadge epoch={currentEpoch} tvl={tvl} />
-        <Progress value={75} className="w-[260px] h-[10px]" />
+        <div className="relative h-[10px] w-[260px] overflow-hidden rounded-full bg-[#0B63FF33]">
+          <div
+            className="h-full w-full flex-1 bg-[#0B63FF] transition-all"
+            style={{ transform: `translateX(-${100 - 45}%)` }}
+          />
+        </div>
       </div>
     </div>
   );

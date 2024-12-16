@@ -28,7 +28,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-[40%_1fr_1fr] gap-6">
+      <div className="grid grid-cols-[60%_1fr] xl:grid-cols-[40%_1fr_1fr] gap-6">
         <RewardsCard
           title="TOTAL REWARDS"
           points="134,304"

@@ -44,7 +44,7 @@ export function PortfolioChart() {
               className={
                 selectedRange === range
                   ? "border-0 bg-[#0B63FF33] w-[30px] h-[30px] rounded-[5px] text-[#0B63FF] font-mono text-xs font-bold"
-                  : "border-0 bg-white w-[30px] h-[30px] rounded-[5px] text-[#000000] font-mono text-xs font-bold"
+                  : "border-0 bg-white w-[30px] h-[30px] rounded-[5px] text-[#808080] font-mono text-xs font-bold"
               }
               onClick={() => setSelectedRange(range)}
             >
@@ -53,12 +53,21 @@ export function PortfolioChart() {
           ))}
         </div>
         <div className="flex items-center space-x-4">
-          <Button variant="outline" size="sm">
-            Revenue
-          </Button>
-          <Button variant="outline" size="sm">
-            Balance
-          </Button>
+          <div className="flex items-center border border-[#EBEDED] rounded-[10px] p-[5px] text-[#0B63FF] space-x-4">
+            <Button className="border-0" variant="outline" size="sm">
+              Revenue
+            </Button>
+            <Button
+              className="border-0 bg-[#0B63FF33]"
+              variant="outline"
+              size="sm"
+            >
+              Balance
+            </Button>
+          </div>
+          <div className="rounded-[10px] border border-[#EBEDED] bg-[#FFFFFF] w-[40px] h-[40px] py-3 flex flex-col items-center">
+            <img src="/calender.svg" alt="boox" />
+          </div>
         </div>
       </div>
 
