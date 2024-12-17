@@ -4,3 +4,9 @@ import { twMerge } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
+
+export function formatWallet(address?: string) {
+  if (address) {
+    return address.slice(0, 6) + "..." + address.slice(address.length - 3);
+  }
+}
