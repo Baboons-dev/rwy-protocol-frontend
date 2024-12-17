@@ -18,7 +18,7 @@ export function RewardValue({
       style={{
         color: variant === "primary" ? "#FFFFFFBF" : "#000000BF",
       }}
-      className="flex space-x-4 font-mono text-sm"
+      className="flex space-x-4 font-mono text-xs"
     >
       <div>
         {usdValue} USD{" "}

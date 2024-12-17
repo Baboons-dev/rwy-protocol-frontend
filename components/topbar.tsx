@@ -17,7 +17,7 @@ export function Topbar() {
           >
             <span>0206b8...392a</span>
           </Button>
-          <img src={"/wallet.png"} alt="wallet" />
+          <img src={"/wallet.svg"} alt="wallet" />
         </div>
       </div>
     </div>

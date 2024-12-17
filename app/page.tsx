@@ -16,7 +16,7 @@ export default function Dashboard() {
           rewardChange="-10%"
         />
 
-        <div className="hidden lg:block w-2/5 h-[50px] py-2 px-4 bg-white rounded-lg">
+        <div className="hidden lg:block w-2/5 h-[50px] py-2 px-4 border border-[#EBEDED] bg-white rounded-lg">
           <div className="w-full flex items-center justify-between">
             <span>Epoch 2</span>
             <span>$7-15m TVL</span>

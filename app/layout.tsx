@@ -40,7 +40,7 @@ export default function RootLayout({
                   background:
                     "linear-gradient(180deg, #FFFFFF 0%, #F7F8F9 10.5%)",
                 }}
-                className="flex-1 ml-[10px] border-[#EFF3F4] rounded-[20px] min-h-[calc(100vh-4rem)]"
+                className="flex-1 ml-[10px] border border-[#EFF3F4] rounded-[20px] min-h-[calc(100vh-4rem)]"
               >
                 {children}
               </main>

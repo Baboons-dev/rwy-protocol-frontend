@@ -9,7 +9,9 @@ export function StakeStats() {
       <div className="flex flex-col gap-2 p-[10px]">
         <div className="flex items-center space-x-2">
           <h3 className="text-xs font-mono font-semibold">REWARD RATE</h3>
-          <Badge variant="secondary">x1</Badge>
+          <p className="bg-[#FFCD2A] rounded-[5px] w-[25px] h-[18px] text-center text-[10px] font-mono font-semibold">
+            x1
+          </p>
         </div>
         <div>
           <div className="text-[20px] font-bold">1 CSPR : 1 Point</div>

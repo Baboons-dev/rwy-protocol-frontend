@@ -36,9 +36,9 @@ export function StakeForm() {
                 <span>0 CSPR</span>
               </div>
               <Input
-                className="rounded-[10px] px-[20px]"
+                className="rounded-[10px] px-[20px] text-[16px] font-mono font-semibold text-[#cccccc]"
                 type="number"
-                placeholder="0.00"
+                placeholder="0"
               />
 
               <div className="mt-[10px]">
