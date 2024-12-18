@@ -43,7 +43,7 @@ export function PortfolioChart() {
               size="sm"
               className={
                 selectedRange === range
-                  ? 'border-0 bg-[#0B63FF33] w-[30px] h-[30px] rounded-[5px] text-[#0B63FF] font-mono text-xs font-bold hover:text-white'
+                  ? 'border-0 bg-[#0B63FF33] w-[30px] h-[30px] rounded-[5px] text-primary font-mono text-xs font-bold hover:text-white'
                   : 'border-0 bg-white w-[30px] h-[30px] rounded-[5px] text-[#808080] font-mono text-xs font-bold'
               }
               onClick={() => setSelectedRange(range)}
@@ -53,7 +53,7 @@ export function PortfolioChart() {
           ))}
         </div>
         <div className="flex items-center space-x-4">
-          <div className="flex items-center border border-[#EBEDED] rounded-[10px] p-[5px] text-[#0B63FF] space-x-4">
+          <div className="flex items-center border border-[#EBEDED] rounded-[10px] p-[5px] text-primary space-x-4">
             <Button className="border-0" variant="outline" size="sm">
               Revenue
             </Button>

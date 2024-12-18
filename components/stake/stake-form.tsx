@@ -40,8 +40,8 @@ export function StakeForm() {
 
               <div className="mt-[10px]">
                 <div className="relative w-full mt-[20px] h-[10px] bg-[#0B63FF33] rounded-[10px]">
-                  <div className="w-1/2 absolute top-0 left-0 h-[10px] bg-[#0B63FF] rounded-[10px]"></div>
-                  <div className="absolute top-1/2 left-[50%] -translate-x-1/2 -translate-y-1/2 w-[30px] h-[30px] bg-[#0B63FF] rounded-full cursor-pointer shadow-lg"></div>
+                  <div className="w-1/2 absolute top-0 left-0 h-[10px] bg-primary rounded-[10px]"></div>
+                  <div className="absolute top-1/2 left-[50%] -translate-x-1/2 -translate-y-1/2 w-[30px] h-[30px] bg-primary rounded-full cursor-pointer shadow-lg"></div>
                 </div>
               </div>
             </div>
@@ -49,11 +49,11 @@ export function StakeForm() {
             <div className="space-y-2">
               <div className="flex justify-between font-semibold font-mono text-xs px-[20px]">
                 <span>You will receive</span>
-                <span className="font-normal text-[#0B63FF]">0 stCSPR</span>
+                <span className="font-normal text-primary">0 stCSPR</span>
               </div>
             </div>
 
-            <Button className="w-full bg-[#0B63FF]">Balance</Button>
+            <Button className="w-full bg-primary">Balance</Button>
           </div>
         </TabsContent>
 

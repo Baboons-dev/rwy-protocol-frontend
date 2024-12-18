@@ -62,7 +62,7 @@ export function FarmsTable() {
             </div>
             <span className="font-bold text-sm font-mono">{asset.name}</span>
             {asset.comingSoon && (
-              <p className="bg-[#0B63FF1A] px-[8px] py-[5px] rounded-[5px] text-[#0B63FF] font-[500] text-[10px] leading-tight font-mono">
+              <p className="bg-[#0B63FF1A] px-[8px] py-[5px] rounded-[5px] text-primary font-[500] text-[10px] leading-tight font-mono">
                 Soon
               </p>
             )}
@@ -103,9 +103,8 @@ export function FarmsTable() {
 
             <div className="flex gap-[5px]">
               <Button
-                variant="outline"
                 size="sm"
-                className="w-[85px] bg-[#0B63FF] text-white font-xs"
+                className="w-[85px] font-xs"
                 disabled={asset.comingSoon}
               >
                 Stake

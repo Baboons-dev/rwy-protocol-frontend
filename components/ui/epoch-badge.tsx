@@ -7,7 +7,7 @@ export function EpochBadge({ epoch, tvl }: EpochBadgeProps) {
   return (
     <div className="flex h-full items-center space-x-2">
       <div className="w-full h-full flex">
-        <div className="min-w-[109px] w-full h-[50px] flex items-center space-x-2 bg-[#0B63FF] px-4 rounded-tl-[10px] rounded-bl-[10px]">
+        <div className="min-w-[109px] w-full h-[50px] flex items-center space-x-2 bg-primary px-4 rounded-tl-[10px] rounded-bl-[10px]">
           <img src="/fire.svg" alt="ffire" />
           <span className="text-white text-[21px] font-bold">
             Epoch {epoch}
