@@ -3,6 +3,7 @@ import { CsprClickThemes } from '@make-software/csprclick-ui';
 export const AppTheme = {
   dark: {
     ...CsprClickThemes.dark,
+    fontFamily: 'JetBrains Mono',
     topBarBackground: 'rgb(19, 25, 51)',
     backgroundColor: '#0f1429',
     clickLogo: '#ff0012',
@@ -18,6 +19,7 @@ export const AppTheme = {
   },
   light: {
     ...CsprClickThemes.light,
+    fontFamily: 'JetBrains Mono',
     topBarBackground: 'rgb(24, 29, 64)',
     backgroundColor: '#f2f3f5',
     clickLogo: '#ff0012',
