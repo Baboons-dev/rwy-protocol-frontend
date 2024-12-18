@@ -1,26 +1,23 @@
-"use client";
+'use client';
 
-import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export function StakeForm() {
   return (
     <Card className="my-[10px] mx-[20px] p-[5px] bg-[#F7F8F9] border border-[#EBEDED]">
       <Tabs
         defaultValue="stake"
-        className="p-0 rounded-tl-[10px] rounded-tr-[10px] bg-white"
+        className="p-0 rounded-[10px] rounded-tr-[10px] bg-white"
       >
-        <TabsList className="py-0 grid grid-cols-2 mb-6">
+        <TabsList className="py-0 grid grid-cols-2">
           <TabsTrigger value="stake">Stake</TabsTrigger>
           <TabsTrigger value="unstake">Unstake</TabsTrigger>
         </TabsList>
 
-        <TabsContent
-          value="stake"
-          className="bg-white px-[20px] pb-[20px] rounded-bl-[10px] rounded-br-[10px]"
-        >
+        <TabsContent value="stake" className="px-[20px] pb-[20px]">
           <div className="space-y-4 rounded-bl-[10px] rounded-br-[10px]">
             <div className="flex px-[20px] justify-between text-sm font-mono font-[400]">
               <span>Balance</span>
