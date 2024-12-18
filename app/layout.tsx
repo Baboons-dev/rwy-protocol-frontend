@@ -54,7 +54,7 @@ export default function RootLayout({
                       background:
                         'linear-gradient(180deg, #FFFFFF 0%, #F7F8F9 10.5%)',
                     }}
-                    className="border border-[#EFF3F4] rounded-[20px] flex-1 ml-[260px] overflow-y-auto"
+                    className="border border-[#EFF3F4] min-h-[calc(97vh-4rem)] rounded-[20px] flex-1 ml-[270px] overflow-y-auto"
                   >
                     {children}
                   </main>
