@@ -3,7 +3,9 @@ import { useAuthStore } from '@/lib/store/use-store';
 
 const TIMEOUT = 15 * 100000;
 // const SERVER_URL = process.env.NEXT_PUBLIC_API_HOST || 'https://api.cspr.baboons.tech/';
-const SERVER_URL = process.env.NEXT_PUBLIC_API_HOST || 'https://api.cspr-launchpad.baboons.tech/';
+const SERVER_URL =
+  process.env.NEXT_PUBLIC_API_HOST ||
+  'https://w9e7hv7q521zin5u11903.cleavr.one/api/user';
 const API_KEY =
   process.env.NEXT_PUBLIC_API_KEY ||
   '9KVvI9QM_98vtE__EYrhCgxFad-6do8fRB9050923uc';
