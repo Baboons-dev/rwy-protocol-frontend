@@ -84,7 +84,7 @@ export function Topbar() {
                   : 'CONNECT WALLET'}
             </span>
           </Button>
-          <img src={'/wallet.png'} alt="wallet" />
+          <img src={"/wallet.svg"} alt="wallet" />
         </div>
       </div>
     </div>

@@ -1,25 +1,19 @@
 import Link from "next/link";
 import { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Icon from "../Icon";
 
 interface NavItemProps {
   href: string;
-  icon: LucideIcon;
   name: string;
   badge?: string;
   isActive: boolean;
 }
 
-export function NavItem({
-  href,
-  icon: Icon,
-  name,
-  badge,
-  isActive,
-}: NavItemProps) {
+export function NavItem({ href, name, badge, isActive }: NavItemProps) {
   return (
     <Link
-      href={href}
+      href={badge ? "" : href}
       style={{
         color: isActive ? "#0B63FF" : "#000000",
       }}
@@ -28,12 +22,7 @@ export function NavItem({
         "hover:bg-primary/5"
       )}
     >
-      <Icon
-        style={{
-          color: isActive ? "#0B63FF" : "#000000",
-        }}
-        className="h-5 w-5"
-      />
+      <Icon fill={isActive ? "#0B63FF" : "#000000"} name={name} />
       <span>{name}</span>
       {badge && (
         <span className="ml-auto text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded">

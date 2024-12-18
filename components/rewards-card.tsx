@@ -3,6 +3,7 @@
 import { Card } from "@/components/ui/card";
 import { RewardValue } from "@/components/ui/reward-value";
 import { InfoIcon } from "lucide-react";
+import Icon from "./Icon";
 
 interface RewardsCardProps {
   title: string;
@@ -38,25 +39,28 @@ export function RewardsCard({
           <h3 className="text-xs font-mono font-[500]">
             {title}
             {percentage && (
-              <span className="ml-2 text-green-500">{percentage}</span>
+              <span className="ml-2 text-[#39C412]">{percentage}</span>
             )}
           </h3>
-          {variant === "primary" && (
-            <InfoIcon className="h-4 w-4 text-[#FFFFFF80]" />
-          )}
+          {variant === "primary" && <Icon fill={"#FFFFFF"} name={"info"} />}
         </div>
 
         <div className="space-y-2">
-          <div className="flex items-baseline space-x-2">
-            <div className="text-5xl font-bold font-mono">{points}</div>
-            <div
-              style={{
-                color: variant === "primary" ? "#FFFFFF80" : "#00000080",
-              }}
-              className="text-[16px] font-mono"
-            >
-              points
+          <div className="flex items-center justify-between">
+            <div className="flex items-baseline space-x-2">
+              <div className="text-5xl font-bold">{points}</div>
+              <div
+                style={{
+                  color: variant === "primary" ? "#FFFFFF80" : "#00000080",
+                }}
+                className="text-[16px] font-mono"
+              >
+                points
+              </div>
             </div>
+            {title === "DAILY REWARDS" && (
+              <Icon fill={"#FFFFFF"} name={"lines"} />
+            )}
           </div>
 
           <RewardValue

@@ -12,12 +12,12 @@ import { usePathname } from "next/navigation";
 import { NavItem } from "@/components/navigation/nav-item";
 
 const navigation = [
-  { name: "Dashboard", href: "/", icon: LayoutDashboard },
-  { name: "Stake", href: "/stake", icon: Wallet },
-  { name: "Portfolio", href: "/portfolio", icon: Briefcase },
-  { name: "Farms", href: "/farms", icon: Trees },
-  { name: "Nodes", href: "/nodes", icon: Network, badge: "Soon" },
-  { name: "Governance", href: "/governance", icon: Vote, badge: "Soon" },
+  { name: "Dashboard", href: "/" },
+  { name: "Stake", href: "/stake" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Farms", href: "/farms" },
+  { name: "Nodes", href: "/nodes", badge: "Soon" },
+  { name: "Governance", href: "/governance", badge: "Soon" },
 ];
 
 export function Sidebar() {
@@ -30,7 +30,6 @@ export function Sidebar() {
           <NavItem
             key={item.name}
             href={item.href}
-            icon={item.icon}
             name={item.name}
             badge={item.badge}
             isActive={pathname === item.href}
