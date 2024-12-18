@@ -1,10 +1,15 @@
+'use client';
 import { EpochProgress } from '@/components/epoch-progress';
 import { RewardsCard } from '@/components/rewards-card';
 import { PortfolioValue } from '@/components/portfolio-value';
 import { StakeCard } from '@/components/stake-card';
 import { PortfolioChart } from '@/components/portfolio-chart';
+import { useState } from 'react';
+import { HistoryModal } from '@/components/historyModal';
 
 export default function Dashboard() {
+  const [openModal, setModalOpen] = useState(false);
+
   return (
     <div className="px-[60px] py-[30px] space-y-6">
       <div className="w-full flex items-center gap-2">
@@ -14,6 +19,8 @@ export default function Dashboard() {
           </p>
           <EpochProgress currentEpoch={1} tvl="$7m" />
         </div>
+
+        {openModal && <HistoryModal onOpenChange={setModalOpen} />}
 
         <div className="hidden lg:block w-2/5">
           <p className="text-xs mb-2 font-semibold text-[#00000059] font-mono">
@@ -29,7 +36,10 @@ export default function Dashboard() {
         </div>
 
         <div className="w-[50xp] mt-6">
-          <div className="rounded-[10px] border border-[#EBEDED] bg-[#FFFFFF] w-[50px] h-[50px] py-4 flex flex-col items-center">
+          <div
+            onClick={() => setModalOpen(true)}
+            className="rounded-[10px] border border-[#EBEDED] bg-[#FFFFFF] w-[50px] h-[50px] py-4 flex flex-col items-center"
+          >
             <img src="/box.svg" alt="boox" />
           </div>
         </div>
