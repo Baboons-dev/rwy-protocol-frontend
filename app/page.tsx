@@ -12,13 +12,7 @@ export default function Dashboard() {
           <p className="text-xs mb-2 font-semibold text-[#00000059] font-mono">
             CURRENT EPOCH
           </p>
-          <EpochProgress
-            currentEpoch={1}
-            nextEpoch={2}
-            tvl="$7m"
-            nextTvl="$7-15m"
-            rewardChange="-10%"
-          />
+          <EpochProgress currentEpoch={1} tvl="$7m" />
         </div>
 
         <div className="hidden lg:block w-2/5">

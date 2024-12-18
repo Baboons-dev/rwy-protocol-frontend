@@ -3,19 +3,10 @@ import { EpochBadge } from '@/components/ui/epoch-badge';
 
 interface EpochProgressProps {
   currentEpoch: number;
-  nextEpoch: number;
   tvl: string;
-  nextTvl: string;
-  rewardChange: string;
 }
 
-export function EpochProgress({
-  currentEpoch,
-  nextEpoch,
-  tvl,
-  nextTvl,
-  rewardChange,
-}: EpochProgressProps) {
+export function EpochProgress({ currentEpoch, tvl }: EpochProgressProps) {
   return (
     <div className="w-full pr-4 bg-white rounded-[12px] border border-[#0B63FF] shadow-sm">
       <div className="h-full flex items-center justify-between">

@@ -65,7 +65,14 @@ export function Topbar() {
   };
 
   return (
-    <div className="h-16 border-b bg-[#FFFFFF] px-[30px] py-[10px] rounded-[20px] border border-[#EFF3F4]">
+    <div
+      style={{
+        position: 'fixed',
+        width: '99%',
+        zIndex: 9,
+      }}
+      className="h-16 border-b bg-[#FFFFFF] px-[30px] py-[10px] rounded-[20px] border border-[#EFF3F4]"
+    >
       <div className="w-full h-full flex items-center justify-between">
         <img src={'/logo.svg'} alt="logoo" />
         <div className="flex items-center space-x-2">
@@ -84,7 +91,7 @@ export function Topbar() {
                   : 'CONNECT WALLET'}
             </span>
           </Button>
-          <img src={"/wallet.svg"} alt="wallet" />
+          <img src={'/wallet.svg'} alt="wallet" />
         </div>
       </div>
     </div>
