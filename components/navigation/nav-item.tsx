@@ -18,14 +18,14 @@ export function NavItem({ href, name, badge, isActive }: NavItemProps) {
         color: isActive ? '#0B63FF' : '#000000',
       }}
       className={cn(
-        'flex items-center space-x-3 px-[30px] py-2 rounded-lg mb-1 group',
+        'flex font-semibold text-[14px] items-center space-x-3 px-[30px] py-2 rounded-lg mb-1 group',
         'hover:bg-primary/5',
       )}
     >
       <Icon fill={isActive ? '#0B63FF' : '#000000'} name={name} />
       <span>{name}</span>
       {badge && (
-        <span className="ml-auto text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded">
+        <span className="ml-auto text-[10px] leading-tight bg-blue-100 text-blue-600 px-[8px] py-[5px] rounded-[5px] font-mono font-medium">
           {badge}
         </span>
       )}
