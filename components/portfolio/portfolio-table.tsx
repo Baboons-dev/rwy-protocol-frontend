@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 interface Asset {
   name: string;
@@ -16,27 +16,27 @@ interface Asset {
 
 const assets: Asset[] = [
   {
-    name: "CSPR",
-    icon: "/cspr.svg",
-    platformBalance: "0",
-    deposit: "0",
-    multiplier: "x1",
-    decreaseInfo: "Decreases to x0.9 in 13h 12m 45s",
+    name: 'CSPR',
+    icon: '/cspr.svg',
+    platformBalance: '0',
+    deposit: '0',
+    multiplier: 'x1',
+    decreaseInfo: 'Decreases to x0.9 in 13h 12m 45s',
   },
   {
-    name: "RWAfi",
-    icon: "/rwafi.svg",
-    platformBalance: "0",
-    deposit: "0",
-    multiplier: "x2",
+    name: 'RWAfi',
+    icon: '/rwafi.svg',
+    platformBalance: '0',
+    deposit: '0',
+    multiplier: 'x2',
     comingSoon: true,
   },
   {
-    name: "CUSD",
-    icon: "/cusd.svg",
-    platformBalance: "0",
-    deposit: "0",
-    multiplier: "x2",
+    name: 'CUSD',
+    icon: '/cusd.svg',
+    platformBalance: '0',
+    deposit: '0',
+    multiplier: 'x2',
     comingSoon: true,
   },
 ];
@@ -63,7 +63,7 @@ export function PortfolioTable() {
             </div>
             <span className="font-bold text-sm font-mono">{asset.name}</span>
             {asset.comingSoon && (
-              <p className=" bg-[#0B63FF1A] px-[8px] py-[5px] rounded-[5px] text-[#0B63FF] font-[500] text-sm font-mono">
+              <p className="bg-[#0B63FF1A] px-[8px] py-[5px] rounded-[5px] text-primary font-[500] text-[10px] leading-tight font-mono">
                 Soon
               </p>
             )}

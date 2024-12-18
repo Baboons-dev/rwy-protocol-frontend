@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Clock } from "lucide-react";
+import { Card } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Clock } from 'lucide-react';
 
 export function UnstakingInfo() {
   return (
@@ -28,7 +28,7 @@ export function UnstakingInfo() {
               123,405.0403 CSPR
             </h3>
           </div>
-          <Button className="w-[86px] h-[30px] bg-[#0B63FF] text-xs">
+          <Button className="w-[86px] h-[30px] bg-primary text-xs">
             Claim
           </Button>
         </div>

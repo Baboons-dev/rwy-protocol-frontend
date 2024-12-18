@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 import {
   AreaChart,
   Area,
@@ -8,9 +8,9 @@ import {
   YAxis,
   CartesianGrid,
   ResponsiveContainer,
-} from "recharts";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+} from 'recharts';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 
 // Dummy data to mimic the chart in the screenshot
 const generateDummyData = (days: number) => {
@@ -21,11 +21,11 @@ const generateDummyData = (days: number) => {
 };
 
 const timeRanges = [
-  { label: "24H", days: 24 },
-  { label: "1W", days: 7 },
-  { label: "1M", days: 30 },
-  { label: "3M", days: 90 },
-  { label: "1Y", days: 365 },
+  { label: '24H', days: 24 },
+  { label: '1W', days: 7 },
+  { label: '1M', days: 30 },
+  { label: '3M', days: 90 },
+  { label: '1Y', days: 365 },
 ];
 
 export function PortfolioChart() {
@@ -39,12 +39,12 @@ export function PortfolioChart() {
           {timeRanges.map((range) => (
             <Button
               key={range.label}
-              variant={selectedRange === range ? "default" : "outline"}
+              variant={selectedRange === range ? 'default' : 'outline'}
               size="sm"
               className={
                 selectedRange === range
-                  ? "border-0 bg-[#0B63FF33] w-[30px] h-[30px] rounded-[5px] text-[#0B63FF] font-mono text-xs font-bold"
-                  : "border-0 bg-white w-[30px] h-[30px] rounded-[5px] text-[#808080] font-mono text-xs font-bold"
+                  ? 'border-0 bg-[#0B63FF33] w-[30px] h-[30px] rounded-[5px] text-primary font-mono text-xs font-bold hover:text-white'
+                  : 'border-0 bg-white w-[30px] h-[30px] rounded-[5px] text-[#808080] font-mono text-xs font-bold'
               }
               onClick={() => setSelectedRange(range)}
             >
@@ -53,7 +53,7 @@ export function PortfolioChart() {
           ))}
         </div>
         <div className="flex items-center space-x-4">
-          <div className="flex items-center border border-[#EBEDED] rounded-[10px] p-[5px] text-[#0B63FF] space-x-4">
+          <div className="flex items-center border border-[#EBEDED] rounded-[10px] p-[5px] text-primary space-x-4">
             <Button className="border-0" variant="outline" size="sm">
               Revenue
             </Button>
@@ -92,12 +92,12 @@ export function PortfolioChart() {
               dataKey="date"
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: "#666" }}
+              tick={{ fontSize: 12, fill: '#666' }}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              tick={{ fontSize: 12, fill: "#666" }}
+              tick={{ fontSize: 12, fill: '#666' }}
             />
             <Area
               type="monotone"

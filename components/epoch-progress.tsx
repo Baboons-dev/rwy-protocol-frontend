@@ -22,7 +22,7 @@ export function EpochProgress({
         <EpochBadge epoch={currentEpoch} tvl={tvl} />
         <div className="relative h-[10px] w-[260px] overflow-hidden rounded-[10px] bg-[#0B63FF33]">
           <div
-            className="h-full w-full flex-1 bg-[#0B63FF] transition-all"
+            className="h-full w-full flex-1 bg-primary transition-all"
             style={{ transform: `translateX(-${100 - 45}%)` }}
           />
         </div>

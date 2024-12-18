@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 interface Asset {
   name: string;
@@ -16,27 +16,27 @@ interface Asset {
 
 const assets: Asset[] = [
   {
-    name: "CSPR",
-    icon: "/cspr.svg",
-    platformBalance: "0",
-    deposit: "120,405 CSPR",
-    multiplier: "x1",
-    decreaseInfo: "Decreases to x0.9 in 13h 12m 45s",
+    name: 'CSPR',
+    icon: '/cspr.svg',
+    platformBalance: '0',
+    deposit: '120,405 CSPR',
+    multiplier: 'x1',
+    decreaseInfo: 'Decreases to x0.9 in 13h 12m 45s',
   },
   {
-    name: "RWAfi",
-    icon: "/rwafi.svg",
-    platformBalance: "0",
-    deposit: "120,405 CSPR",
-    multiplier: "x2",
+    name: 'RWAfi',
+    icon: '/rwafi.svg',
+    platformBalance: '0',
+    deposit: '120,405 CSPR',
+    multiplier: 'x2',
     comingSoon: true,
   },
   {
-    name: "CUSD",
-    icon: "/cusd.svg",
-    platformBalance: "0",
-    deposit: "120,405 CSPR",
-    multiplier: "x2",
+    name: 'CUSD',
+    icon: '/cusd.svg',
+    platformBalance: '0',
+    deposit: '120,405 CSPR',
+    multiplier: 'x2',
     comingSoon: true,
   },
 ];
@@ -62,7 +62,7 @@ export function FarmsTable() {
             </div>
             <span className="font-bold text-sm font-mono">{asset.name}</span>
             {asset.comingSoon && (
-              <p className=" bg-[#0B63FF1A] px-[8px] py-[5px] rounded-[5px] text-[#0B63FF] font-[500] text-sm font-mono">
+              <p className="bg-[#0B63FF1A] px-[8px] py-[5px] rounded-[5px] text-primary font-[500] text-[10px] leading-tight font-mono">
                 Soon
               </p>
             )}
@@ -89,7 +89,7 @@ export function FarmsTable() {
                   src="/loadIcon.svg"
                   alt="looad"
                 />
-                <span className="font-semibold text-xs font-mono"> 1</span>
+                <span className="font-semibold text-xs font-mono">1</span>
               </div>
               <div className="flex items-center space-x-2">
                 <img
@@ -97,15 +97,14 @@ export function FarmsTable() {
                   src="/tick.svg"
                   alt="looad"
                 />
-                <span className="font-semibold text-xs font-mono"> 1</span>
+                <span className="font-semibold text-xs font-mono">1</span>
               </div>
             </div>
 
             <div className="flex gap-[5px]">
               <Button
-                variant="outline"
                 size="sm"
-                className="w-[85px] bg-[#0B63FF] text-white font-xs"
+                className="w-[85px] font-xs"
                 disabled={asset.comingSoon}
               >
                 Stake
