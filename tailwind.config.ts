@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        DEFAULT: '14px',
+      },
       fontFamily: {
         sans: ['var(--font-montserrat)'],
         mono: ['var(--font-roboto-mono)'],

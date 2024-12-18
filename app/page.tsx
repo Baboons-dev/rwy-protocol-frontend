@@ -1,8 +1,8 @@
-import { EpochProgress } from "@/components/epoch-progress";
-import { RewardsCard } from "@/components/rewards-card";
-import { PortfolioValue } from "@/components/portfolio-value";
-import { StakeCard } from "@/components/stake-card";
-import { PortfolioChart } from "@/components/portfolio-chart";
+import { EpochProgress } from '@/components/epoch-progress';
+import { RewardsCard } from '@/components/rewards-card';
+import { PortfolioValue } from '@/components/portfolio-value';
+import { StakeCard } from '@/components/stake-card';
+import { PortfolioChart } from '@/components/portfolio-chart';
 
 export default function Dashboard() {
   return (
@@ -16,11 +16,15 @@ export default function Dashboard() {
           rewardChange="-10%"
         />
 
-        <div className="hidden lg:block w-2/5 h-[50px] py-2 px-4 border border-[#EBEDED] bg-white rounded-lg">
+        <div className="hidden items-center lg:flex w-2/5 h-[50px] py-2 px-4 border border-[#EBEDED] bg-white rounded-lg">
           <div className="w-full flex items-center justify-between">
-            <span>Epoch 2</span>
-            <span>$7-15m TVL</span>
-            <span className="text-red-500">-10% Rewards</span>
+            <span className="text-[18px] font-semibold text-[#000000BF]">
+              Epoch 2
+            </span>
+            <span className="text-[14px]">$7-15m TVL</span>
+            <span className="text-red-500 text-[12px] font-mono">
+              -10% Rewards
+            </span>
           </div>
         </div>
         <div className="rounded-[10px] border border-[#EBEDED] bg-[#FFFFFF] w-[50px] h-[50px] py-4 flex flex-col items-center">
