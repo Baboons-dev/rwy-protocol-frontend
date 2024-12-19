@@ -36,8 +36,8 @@ export function HistoryModal({ onOpenChange }: ParticipationModalProps) {
             Upcoming
           </p>
           <div className="w-full h-[45px] px-[20px] border border-[#EBEDED] bg-white rounded-lg">
-            <div className="w-full h-full flex items-center justify-between text-xs font-semibold text-[#000000] font-mono">
-              <span className="font-sans">Epoch 2</span>
+            <div className="w-full h-full flex items-center justify-between text-[12px] font-medium text-[#000000] font-mono">
+              <span className="font-sans text-[14px] font-bold">Epoch 2</span>
               <span>$7-15m TVL</span>
               <span className="text-red-500">-10% Rewards</span>
               <span>14/01/25 - 14/07/25</span>
@@ -48,18 +48,18 @@ export function HistoryModal({ onOpenChange }: ParticipationModalProps) {
             Past
           </p>
           <div className="w-full h-[45px] px-[20px] border border-[#EBEDED] mb-2 bg-white rounded-lg">
-            <div className="w-full h-full flex items-center justify-between text-xs font-semibold text-[#000000] font-mono">
-              <span className="font-sans">Epoch 2</span>
+            <div className="w-full h-full flex items-center justify-between text-[12px] font-medium text-[#000000] font-mono">
+              <span className="font-sans text-[14px] font-bold">Epoch 2</span>
               <span>$7m TVL</span>
-              <span className="">1.51b points</span>
+              <span>1.51b points</span>
               <span>14/01/25 - 14/07/25</span>
             </div>
           </div>
           <div className="w-full h-[45px] px-[20px] border border-[#EBEDED] bg-white rounded-lg">
-            <div className="w-full h-full flex items-center justify-between text-xs font-semibold text-[#000000] font-mono">
-              <span className="font-sans">Epoch 1</span>
+            <div className="w-full h-full flex items-center justify-between text-[12px] font-medium text-[#000000] font-mono">
+              <span className="font-sans text-[14px] font-bold">Epoch 2</span>
               <span>$7m TVL</span>
-              <span className="">1.51b points</span>
+              <span>1.51b points</span>
               <span>14/01/25 - 14/07/25</span>
             </div>
           </div>

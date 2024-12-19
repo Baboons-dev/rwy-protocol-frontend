@@ -14,7 +14,7 @@ export default function Dashboard() {
     <div className="px-[60px] py-[30px] space-y-6">
       <div className="w-full flex items-center gap-2">
         <div className="w-full lg:w-3/5">
-          <p className="text-xs mb-2 font-semibold text-[#00000059] font-mono">
+          <p className="text-xs mb-2 px-[20px] font-semibold text-[#00000059] font-mono">
             CURRENT EPOCH
           </p>
           <EpochProgress currentEpoch={1} tvl="$7m" />
@@ -23,15 +23,17 @@ export default function Dashboard() {
         {openModal && <HistoryModal onOpenChange={setModalOpen} />}
 
         <div className="hidden lg:block w-2/5">
-          <p className="text-xs mb-2 font-semibold text-[#00000059] font-mono">
+          <p className="text-xs mb-2 px-[20px] font-semibold text-[#00000059] font-mono">
             NEXT EPOCH
           </p>
-          <div className="w-full h-[50px] py-2 px-4 border border-[#EBEDED] bg-white rounded-lg">
-            <div className="w-full flex items-center justify-between">
-              <span>Epoch 2</span>
-              <span>$7-15m TVL</span>
-              <span className="text-red-500">-10% Rewards</span>
-            </div>
+          <div className="w-full h-[50px] items-center flex py-2 px-4 border border-[#EBEDED] bg-white rounded-[10px] justify-between">
+            <span className="text-[18px] font-semibold text-[#000000BF]">
+              Epoch 2
+            </span>
+            <span className="text-[14px]">$7-15m TVL</span>
+            <span className="text-red-500 text-[12px] font-mono">
+              -10% Rewards
+            </span>
           </div>
         </div>
 

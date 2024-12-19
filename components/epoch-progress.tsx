@@ -8,7 +8,7 @@ interface EpochProgressProps {
 
 export function EpochProgress({ currentEpoch, tvl }: EpochProgressProps) {
   return (
-    <div className="w-full pr-4 bg-white rounded-[12px] border border-[#0B63FF] shadow-sm">
+    <div className="w-full pr-4 bg-white rounded-[10px] border border-[#0B63FF] shadow-sm">
       <div className="h-full flex items-center justify-between">
         <EpochBadge epoch={currentEpoch} tvl={tvl} />
         <div className="relative h-[10px] w-[260px] overflow-hidden rounded-[10px] bg-[#0B63FF33]">
