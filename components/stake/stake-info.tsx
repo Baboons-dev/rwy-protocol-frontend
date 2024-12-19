@@ -1,6 +1,6 @@
 export function StakeInfo() {
   return (
-    <div className="mt-[10px] px-[20px] pt-[10px] pb-[20px] text-xs text-[#00000080]">
+    <div className="mt-[10px] px-[20px] pt-[10px] pb-[20px] text-[11px] lg:text-xs text-[#00000080]">
       <p>
         Curabitur non blandit risus dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

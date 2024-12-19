@@ -33,9 +33,9 @@ export function PortfolioChart() {
   const data = generateDummyData(selectedRange.days);
 
   return (
-    <Card className="p-4">
+    <Card className="p-[10px]">
       <div className="flex justify-between items-center mb-6">
-        <div className="flex space-x-2 border border-[#EBEDED] rounded-[10px] p-[5px]">
+        <div className="flex space-x-1 lg:space-x-2 border border-[#EBEDED] rounded-[10px] p-[5px]">
           {timeRanges.map((range) => (
             <Button
               key={range.label}
@@ -43,8 +43,8 @@ export function PortfolioChart() {
               size="sm"
               className={
                 selectedRange === range
-                  ? 'border-0 bg-[#0B63FF33] w-[30px] h-[30px] rounded-[5px] text-primary font-mono text-xs font-bold hover:text-white'
-                  : 'border-0 bg-white w-[30px] h-[30px] rounded-[5px] text-[#808080] font-mono text-xs font-bold'
+                  ? 'border-0 bg-[#0B63FF33] w-[25px] h-[22px] rounded-[5px] text-primary font-mono text-[10px] lg:text-xs font-bold hover:text-white'
+                  : 'border-0 bg-white w-[25px] h-[22px] rounded-[5px] text-[#808080] font-mono text-[10px] lg:text-xs font-bold'
               }
               onClick={() => setSelectedRange(range)}
             >
@@ -52,20 +52,24 @@ export function PortfolioChart() {
             </Button>
           ))}
         </div>
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center border border-[#EBEDED] rounded-[10px] p-[5px] text-primary space-x-4">
-            <Button className="border-0" variant="outline" size="sm">
+        <div className="flex items-center space-x-2 lg:space-x-4">
+          <div className="flex items-center border border-[#EBEDED] rounded-[10px] p-[5px] text-primary space-x-2 lg:space-x-4">
+            <Button
+              className="border-0 text-[10px] lg:text-xs w-[56px] h-[22px] lg:w-[90px] lg:h-[30px]"
+              variant="outline"
+              size="sm"
+            >
               Revenue
             </Button>
             <Button
-              className="border-0 bg-[#0B63FF33]"
+              className="border-0 bg-[#0B63FF33] text-[10px] lg:text-xs w-[56px] h-[22px] lg:w-[90px] lg:h-[30px]"
               variant="outline"
               size="sm"
             >
               Balance
             </Button>
           </div>
-          <div className="rounded-[10px] border border-[#EBEDED] bg-[#FFFFFF] w-[40px] h-[40px] py-3 flex flex-col items-center">
+          <div className="rounded-[10px] border border-[#EBEDED] bg-[#FFFFFF] w-[30px] h-[30px] py-1.5 lg:w-[40px] lg:h-[40px] lg:py-3 flex flex-col items-center">
             <img src="/calender.svg" alt="boox" />
           </div>
         </div>

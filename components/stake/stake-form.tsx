@@ -12,14 +12,21 @@ export function StakeForm() {
         defaultValue="stake"
         className="p-0 rounded-[10px] rounded-tr-[10px] bg-white"
       >
-        <TabsList className="py-0 grid grid-cols-2">
-          <TabsTrigger value="stake">Stake</TabsTrigger>
-          <TabsTrigger value="unstake">Unstake</TabsTrigger>
+        <TabsList className=" py-0 grid grid-cols-2">
+          <TabsTrigger className="text-[12px] lg:text-sm" value="stake">
+            Stake
+          </TabsTrigger>
+          <TabsTrigger className="text-[12px] lg:text-sm" value="unstake">
+            Unstake
+          </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="stake" className="px-[20px] pb-[20px]">
+        <TabsContent
+          value="stake"
+          className="p-[10px] lg:px-[20px] lg:pb-[20px]"
+        >
           <div className="space-y-4 rounded-bl-[10px] rounded-br-[10px]">
-            <div className="flex px-[20px] justify-between text-sm font-mono font-[400]">
+            <div className="flex px-[20px] justify-between text-[10px] lg:text-sm font-mono font-[400]">
               <span>Balance</span>
               <div className="flex flex-col items-end">
                 <span className="font-semibold">100,000.040392 CSPR</span>
@@ -28,7 +35,7 @@ export function StakeForm() {
             </div>
 
             <div className="bg-[#F7F8F9] rounded-[10px] px-[10px] py-[15px] space-y-2">
-              <div className="flex justify-between font-mono font-bold text-xs px-[10px]">
+              <div className="flex justify-between font-mono font-bold text-[10px] lg:text-xs px-[10px]">
                 <span>You will pay</span>
                 <span>0 CSPR</span>
               </div>
@@ -47,13 +54,15 @@ export function StakeForm() {
             </div>
 
             <div className="space-y-2">
-              <div className="flex justify-between font-semibold font-mono text-xs px-[20px]">
+              <div className="flex justify-between font-semibold font-mono text-[10px] lg:text-xs px-[20px]">
                 <span>You will receive</span>
                 <span className="font-normal text-primary">0 stCSPR</span>
               </div>
             </div>
 
-            <Button className="w-full bg-primary">Balance</Button>
+            <Button className="w-full bg-primary text-[12px] lg:text-[14px]">
+              Balance
+            </Button>
           </div>
         </TabsContent>
 

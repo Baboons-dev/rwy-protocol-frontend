@@ -11,11 +11,18 @@ export function EpochProgress({ currentEpoch, tvl }: EpochProgressProps) {
     <div className="w-full pr-4 bg-white rounded-[12px] border border-[#0B63FF] shadow-sm">
       <div className="h-full flex items-center justify-between">
         <EpochBadge epoch={currentEpoch} tvl={tvl} />
-        <div className="relative h-[10px] w-[260px] overflow-hidden rounded-[10px] bg-[#0B63FF33]">
+        <div className="hidden lg:block relative h-[10px] w-[26px] rounded-full lg:w-[260px] lg:rounded-[10px] overflow-hidden bg-[#0B63FF33]">
           <div
             className="h-full w-full flex-1 bg-primary transition-all"
             style={{ transform: `translateX(-${100 - 45}%)` }}
           />
+        </div>
+        <div className="relative flex lg:hidden items-center justify-center rounded-full w-[26px] h-[25px]">
+          <div className="absolute w-full h-full rounded-full border-4 border-[#0B63FF33]"></div>
+          <div
+            className="absolute w-full h-full rounded-full border-4 border-[#0B63FF] border-b-transparent"
+            // style={{ transform: `rotate(${1 * 360}deg)` }}
+          ></div>
         </div>
       </div>
     </div>

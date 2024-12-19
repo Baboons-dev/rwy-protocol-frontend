@@ -41,12 +41,12 @@ export default function RootLayout({
           <ContextComp>
             <CasperProvider>
               <div
-                className={`Layout_file min-h-screen overflow-y-hidden my-[5px] mx-[10px]`}
+                className={`Layout_file min-h-screen overflow-y-hidden my-[5px]`}
                 id="root"
               >
                 <Topbar />
                 <div className="flex mt-[10px] pt-[4rem]">
-                  <div className="fixed top-[5rem] left-[10px] bottom-0 w-[260px] bg-white">
+                  <div className="hidden xl:block fixed top-[5rem] left-[10px] bottom-0 w-[260px] bg-white">
                     <Sidebar />
                   </div>
                   <main
@@ -54,7 +54,7 @@ export default function RootLayout({
                       background:
                         'linear-gradient(180deg, #FFFFFF 0%, #F7F8F9 10.5%)',
                     }}
-                    className="border border-[#EFF3F4] min-h-[calc(97vh-4rem)] rounded-[20px] flex-1 ml-[270px] overflow-y-auto"
+                    className="border border-[#EFF3F4] min-h-[calc(97vh-4rem)] rounded-[20px] lg:mx-[10px] flex-1 xl:ml-[270px] overflow-y-auto"
                   >
                     {children}
                   </main>

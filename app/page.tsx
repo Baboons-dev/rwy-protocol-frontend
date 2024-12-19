@@ -11,10 +11,10 @@ export default function Dashboard() {
   const [openModal, setModalOpen] = useState(false);
 
   return (
-    <div className="px-[60px] py-[30px] space-y-6">
+    <div className="px-[5px] xl:px-[60px] py-[30px] space-y-6">
       <div className="w-full flex items-center gap-2">
         <div className="w-full lg:w-3/5">
-          <p className="text-xs mb-2 font-semibold text-[#00000059] font-mono">
+          <p className="hidden lg:block text-xs mb-2 font-semibold text-[#00000059] font-mono">
             CURRENT EPOCH
           </p>
           <EpochProgress currentEpoch={1} tvl="$7m" />
@@ -35,7 +35,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="w-[50xp] mt-6">
+        <div className="w-[50xp] lg:mt-6">
           <div
             onClick={() => setModalOpen(true)}
             className="rounded-[10px] border border-[#EBEDED] bg-[#FFFFFF] w-[50px] h-[50px] py-4 flex flex-col items-center"
@@ -45,28 +45,42 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-[60%_1fr] xl:grid-cols-[40%_1fr_1fr] gap-6">
+      <div className="grid grid-cols-[1fr] lg:grid-cols-[40%_1fr_1fr] gap-6">
         <RewardsCard
           title="TOTAL REWARDS"
           points="134,304"
-          usdValue="0.0000"
-          rwafiValue="0.0000"
+          usdValue="0.00"
+          rwafiValue="0.00"
           variant="primary"
+          children={
+            <RewardsCard
+              title="DAILY REWARDS"
+              points="304"
+              usdValue="0.00"
+              rwafiValue="0.00"
+              percentage="0.0384%"
+            />
+          }
         />
-        <RewardsCard
-          title="DAILY REWARDS"
-          points="304"
-          usdValue="0.0000"
-          rwafiValue="0.0000"
-          percentage="0.0384%"
-        />
-        <RewardsCard
-          title="YEARLY REWARDS"
-          points="451.4K"
-          usdValue="0.0000"
-          rwafiValue="0.0000"
-          percentage="0.0384%"
-        />
+        <div className="hidden lg:block w-full">
+          <RewardsCard
+            title="DAILY REWARDS"
+            points="304"
+            usdValue="0.0000"
+            rwafiValue="0.0000"
+            percentage="0.0384%"
+          />
+        </div>
+
+        <div className="hidden lg:block w-full">
+          <RewardsCard
+            title="YEARLY REWARDS"
+            points="451.4K"
+            usdValue="0.0000"
+            rwafiValue="0.0000"
+            percentage="0.0384%"
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-2 gap-6">

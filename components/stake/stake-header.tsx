@@ -3,5 +3,7 @@ interface StakeHeaderProps {
 }
 
 export function StakeHeader({ title }: StakeHeaderProps) {
-  return <h1 className="text-4xl font-bold text-center">{title}</h1>;
+  return (
+    <h1 className="text-[21px] lg:text-4xl font-bold text-center">{title}</h1>
+  );
 }

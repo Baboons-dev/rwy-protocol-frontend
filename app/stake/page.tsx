@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { StakeHeader } from "@/components/stake/stake-header";
-import { StakeOptions } from "@/components/stake/stake-options";
-import { StakeStats } from "@/components/stake/stake-stats";
-import { StakeForm } from "@/components/stake/stake-form";
-import { StakeInfo } from "@/components/stake/stake-info";
-import { UnstakingInfo } from "@/components/stake/unstaking-info";
+import { StakeHeader } from '@/components/stake/stake-header';
+import { StakeOptions } from '@/components/stake/stake-options';
+import { StakeStats } from '@/components/stake/stake-stats';
+import { StakeForm } from '@/components/stake/stake-form';
+import { StakeInfo } from '@/components/stake/stake-info';
+import { UnstakingInfo } from '@/components/stake/unstaking-info';
 
 export default function StakePage() {
   return (
-    <div className="px-[60px] py-[40px]">
+    <div className="px-[5px] lg:px-[60px] py-[40px]">
       <StakeHeader title="Stake & Covnert" />
       <div className="max-w-[590px] mx-auto my-[20px] bg-[#ffffff] rounded-[15px]">
         <StakeOptions />
@@ -18,9 +18,9 @@ export default function StakePage() {
         <StakeInfo />
       </div>
       <div className="max-w-[590px] mx-auto">
-        <div className="flex justify-between font-bold font-mono text-xs px-[20px]">
+        <div className="flex justify-between font-bold font-mono text-[10px] lg:text-xs px-[20px]">
           <span>Unstaking</span>
-          <span className="font-normal">Claim</span>
+          <span className="font-normal text-[9px] lg:text-xs">Claim</span>
         </div>
         <UnstakingInfo />
       </div>

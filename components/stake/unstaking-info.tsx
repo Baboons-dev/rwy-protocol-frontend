@@ -11,11 +11,11 @@ export function UnstakingInfo() {
         <div className="flex justify-between items-center">
           <div className="flex gap-[10px]">
             <img src="/loadIcon.svg" alt="looaad" />
-            <h3 className="font-semibold text-[14px] font-mono">
+            <h3 className="font-semibold text-[10px] lg:text-[14px] font-mono">
               123,405.0403 CSPR
             </h3>
           </div>
-          <span className="text-[10px] font-mono">
+          <span className="text-[9px] lg:text-[10px] font-mono">
             Available in 13h 12m 24s
           </span>
         </div>
@@ -24,11 +24,11 @@ export function UnstakingInfo() {
         <div className="flex justify-between items-center py-2">
           <div className="flex gap-[10px]">
             <img src="/tick.svg" alt="looaad" />
-            <h3 className="font-semibold text-[14px] font-mono">
+            <h3 className="font-semibold text-[10px] lg:text-[14px] font-mono">
               123,405.0403 CSPR
             </h3>
           </div>
-          <Button className="w-[86px] h-[30px] bg-primary text-xs">
+          <Button className="w-[86px] h-[30px] bg-primary text-[10px] lg:text-xs">
             Claim
           </Button>
         </div>

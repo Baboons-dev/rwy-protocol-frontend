@@ -71,17 +71,18 @@ export function Topbar() {
         width: '99%',
         zIndex: 9,
       }}
-      className="h-16 border-b bg-[#FFFFFF] px-[30px] py-[10px] rounded-[20px] border border-[#EFF3F4]"
+      className="h-16 border-b bg-[#FFFFFF] px-[30px] py-[10px] rounded-[20px] border border-[#EFF3F4] mx-[10px]"
     >
       <div className="w-full h-full flex items-center justify-between">
-        <img src={'/logo.svg'} alt="logoo" />
+        <img className="hidden sm:block" src={'/logo.svg'} alt="logoo" />
+        <img className="block sm:hidden" src={'/logosm.svg'} alt="logoo" />
         <div className="flex items-center space-x-2">
           <Button
             onClick={token ? handleDisconnect : handleWalletConnect}
             disabled={walletLoading}
             variant="outline"
             size="sm"
-            className="bg-[#EBECED] px-[7px] py-[12px] font-mono"
+            className="bg-[#EBECED] px-[7px] py-[12px] font-mono text-[10px] lg:text-xs"
           >
             <span>
               {walletLoading

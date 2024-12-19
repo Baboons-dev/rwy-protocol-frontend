@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 interface RewardValueProps {
   usdValue: string;
@@ -16,16 +16,17 @@ export function RewardValue({
   return (
     <div
       style={{
-        color: variant === "primary" ? "#FFFFFFBF" : "#000000BF",
+        color: variant === 'primary' ? '#FFFFFFBF' : '#000000BF',
       }}
-      className="flex space-x-4 font-mono text-xs"
+      className="flex space-x-1 lg:space-x-4 font-mono text-[10px] lg:text-xs"
     >
       <div>
-        {usdValue} USD{" "}
+        {usdValue} USD{' '}
         {soon && (
           <span
+            className="hidden lg:block"
             style={{
-              color: variant === "primary" ? "#FFFFFF80" : "#0B63FFBF",
+              color: variant === 'primary' ? '#FFFFFF80' : '#0B63FFBF',
             }}
           >
             (SOON)
@@ -33,11 +34,11 @@ export function RewardValue({
         )}
       </div>
       <div>
-        {rwafiValue} RWAFi{" "}
+        {rwafiValue} RWAFi{' '}
         {soon && (
           <span
             style={{
-              color: variant === "primary" ? "#FFFFFF80" : "#0B63FFBF",
+              color: variant === 'primary' ? '#FFFFFF80' : '#0B63FFBF',
             }}
           >
             (SOON)
