@@ -34,13 +34,8 @@ export function RewardsCard({
           variant === 'primary'
             ? 'linear-gradient(93.56deg, #2271FE 0.02%, #0B63FF 99.98%)'
             : '',
-        // padding: children
-        //   ? window.innerWidth < 1000
-        //     ? '5px'
-        //     : '10px'
-        //   : '10px',
       }}
-      className={`${children ? 'w-[calc(100vw-10px)]' : 'w-full'} lg:w-full ${
+      className={`${children ? 'w-[calc(100vw-10px)]' : 'w-full'} md:w-full ${
         variant === 'primary' ? 'text-white' : 'bg-card'
       } ${children ? 'p-[5px]' : 'p-[10px]'} rounded-[20px] lg:px-[20px] lg:py-[15px]`}
     >

@@ -13,7 +13,7 @@ export default function Dashboard() {
 
   return (
     <div className="px-[5px] py-[10px] lg:px-[60px] lg:py-[30px] space-y-2 lg:space-y-6">
-      <div className="w-[calc(100vw-10px)] lg:w-full flex items-center gap-2">
+      <div className="w-[calc(100vw-10px)] md:w-full flex items-center gap-2">
         <div className="w-full xl:w-3/5">
           <p className="hidden lg:block text-xs px-[20px]  mb-2 font-semibold text-[#00000059] font-mono">
             CURRENT EPOCH
@@ -65,7 +65,7 @@ export default function Dashboard() {
             />
           }
         />
-        <div className="hidden lg:flex gap-[20px] w-full">
+        <div className="hidden xl:flex gap-[20px] w-full">
           <RewardsCard
             title="DAILY REWARDS"
             points="304"
