@@ -1,13 +1,5 @@
 'use client';
 
-import {
-  LayoutDashboard,
-  Wallet,
-  Briefcase,
-  Trees,
-  Network,
-  Vote,
-} from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { NavItem } from '@/components/navigation/nav-item';
 

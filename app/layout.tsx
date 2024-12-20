@@ -7,6 +7,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from 'sonner';
 import ContextComp from '@/context/ContextComp';
 import CasperProvider from '@/context/CasperProvider';
+import { MobileMenu } from '@/components/MobileMenu';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -58,6 +59,9 @@ export default function RootLayout({
                   >
                     {children}
                   </main>
+                  <div className="block lg:hidden fixed bottom-0 w-full bg-[#FFFFFF]">
+                    <MobileMenu />
+                  </div>
                 </div>
               </div>
             </CasperProvider>
