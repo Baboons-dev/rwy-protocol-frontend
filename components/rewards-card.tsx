@@ -34,11 +34,15 @@ export function RewardsCard({
           variant === 'primary'
             ? 'linear-gradient(93.56deg, #2271FE 0.02%, #0B63FF 99.98%)'
             : '',
-        padding: children ? '5px' : '10px',
+        // padding: children
+        //   ? window.innerWidth < 1000
+        //     ? '5px'
+        //     : '10px'
+        //   : '10px',
       }}
-      className={`${children ? 'w-[calc(100vw-10px)]' : 'w-full'} md:w-full ${
+      className={`${children ? 'w-[calc(100vw-10px)]' : 'w-full'} lg:w-full ${
         variant === 'primary' ? 'text-white' : 'bg-card'
-      } rounded-[20px] lg:px-[20px] lg:py-[15px]`}
+      } ${children ? 'p-[5px]' : 'p-[10px]'} rounded-[20px] lg:px-[20px] lg:py-[15px]`}
     >
       <div
         className={`${children ? 'flex items-center justify-between gap-2' : ''} lg:block`}
@@ -63,7 +67,7 @@ export function RewardsCard({
             )}
           </div>
 
-          <div className="space-y-0 md:space-y-2">
+          <div className="space-y-0 lg:space-y-2">
             <div className="flex items-center justify-between">
               <div className="flex items-baseline space-x-2">
                 <div className="text-[21px] lg:text-5xl font-bold">
