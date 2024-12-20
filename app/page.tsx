@@ -12,9 +12,9 @@ export default function Dashboard() {
   const [openModal, setModalOpen] = useState(false);
 
   return (
-    <div className="px-[5px] py-[10px] xl:px-[60px] xl:py-[30px] space-y-2 lg:space-y-6">
+    <div className="px-[5px] py-[10px] lg:px-[60px] lg:py-[30px] space-y-2 lg:space-y-6">
       <div className="w-[calc(100vw-10px)] lg:w-full flex items-center gap-2">
-        <div className="w-full lg:w-3/5">
+        <div className="w-full xl:w-3/5">
           <p className="hidden lg:block text-xs px-[20px]  mb-2 font-semibold text-[#00000059] font-mono">
             CURRENT EPOCH
           </p>
@@ -23,7 +23,7 @@ export default function Dashboard() {
 
         {openModal && <HistoryModal onOpenChange={setModalOpen} />}
 
-        <div className="hidden lg:block w-2/5">
+        <div className="hidden xl:block w-2/5">
           <p className="text-xs mb-2 px-[20px] font-semibold text-[#00000059] font-mono">
             NEXT EPOCH
           </p>
@@ -48,7 +48,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-[1fr] lg:grid-cols-[1fr_1fr] gap-[20px]">
+      <div className="grid grid-cols-[1fr] xl:grid-cols-[1fr_1fr] gap-[20px]">
         <RewardsCard
           title="TOTAL REWARDS"
           points="134,304"

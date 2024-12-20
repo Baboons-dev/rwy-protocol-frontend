@@ -45,7 +45,7 @@ export function RewardsCard({
       } ${children ? 'p-[5px]' : 'p-[10px]'} rounded-[20px] lg:px-[20px] lg:py-[15px]`}
     >
       <div
-        className={`${children ? 'flex items-center justify-between gap-2' : ''} lg:block`}
+        className={`${children ? 'flex items-center justify-between gap-2' : ''} xl:block`}
       >
         {openModal && <InfoModal onOpenChange={setModalOpen} />}
         <div className={children ? 'pl-[10px] py-[10px] lg:pl-0 lg:py-0' : ''}>
@@ -94,7 +94,7 @@ export function RewardsCard({
             />
           </div>
         </div>
-        {children && <div className="w-1/2 block lg:hidden">{children}</div>}
+        {children && <div className="w-1/2 block xl:hidden">{children}</div>}
       </div>
     </Card>
   );
