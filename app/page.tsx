@@ -6,15 +6,16 @@ import { StakeCard } from '@/components/stake-card';
 import { PortfolioChart } from '@/components/portfolio-chart';
 import { useState } from 'react';
 import { HistoryModal } from '@/components/historyModal';
+import { InfoModal } from '@/components/infoModal';
 
 export default function Dashboard() {
   const [openModal, setModalOpen] = useState(false);
 
   return (
-    <div className="px-[5px] xl:px-[60px] py-[30px] space-y-6">
-      <div className="w-full flex items-center gap-2">
+    <div className="px-[5px] py-[10px] xl:px-[60px] xl:py-[30px] space-y-2 lg:space-y-6">
+      <div className="w-[calc(100vw-10px)] lg:w-full flex items-center gap-2">
         <div className="w-full lg:w-3/5">
-          <p className="hidden lg:block text-xs mb-2 font-semibold text-[#00000059] font-mono">
+          <p className="hidden lg:block text-xs px-[20px]  mb-2 font-semibold text-[#00000059] font-mono">
             CURRENT EPOCH
           </p>
           <EpochProgress currentEpoch={1} tvl="$7m" />
@@ -40,14 +41,14 @@ export default function Dashboard() {
         <div className="w-[50xp] lg:mt-6">
           <div
             onClick={() => setModalOpen(true)}
-            className="rounded-[10px] border border-[#EBEDED] bg-[#FFFFFF] w-[50px] h-[50px] py-4 flex flex-col items-center"
+            className="rounded-[10px] border border-[#EBEDED] bg-[#FFFFFF] w-[40px] md:w-[50px] h-[40px] md:h-[50px] py-3 md:py-4 flex flex-col items-center"
           >
             <img src="/box.svg" alt="boox" />
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-[1fr] lg:grid-cols-[40%_1fr_1fr] gap-6">
+      <div className="grid grid-cols-[1fr] lg:grid-cols-[1fr_1fr] gap-[20px]">
         <RewardsCard
           title="TOTAL REWARDS"
           points="134,304"
@@ -64,7 +65,7 @@ export default function Dashboard() {
             />
           }
         />
-        <div className="hidden lg:block w-full">
+        <div className="hidden lg:flex gap-[20px] w-full">
           <RewardsCard
             title="DAILY REWARDS"
             points="304"
@@ -72,9 +73,6 @@ export default function Dashboard() {
             rwafiValue="0.0000"
             percentage="0.0384%"
           />
-        </div>
-
-        <div className="hidden lg:block w-full">
           <RewardsCard
             title="YEARLY REWARDS"
             points="451.4K"

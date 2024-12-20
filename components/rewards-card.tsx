@@ -4,7 +4,8 @@ import { Card } from '@/components/ui/card';
 import { RewardValue } from '@/components/ui/reward-value';
 import { InfoIcon } from 'lucide-react';
 import Icon from './Icon';
-import { Children } from 'react';
+import { Children, useState } from 'react';
+import { InfoModal } from './infoModal';
 
 interface RewardsCardProps {
   title: string;
@@ -25,6 +26,7 @@ export function RewardsCard({
   variant = 'default',
   children,
 }: RewardsCardProps) {
+  const [openModal, setModalOpen] = useState(false);
   return (
     <Card
       style={{
@@ -32,26 +34,36 @@ export function RewardsCard({
           variant === 'primary'
             ? 'linear-gradient(93.56deg, #2271FE 0.02%, #0B63FF 99.98%)'
             : '',
+        padding: children ? '5px' : '10px',
       }}
-      className={`${
+      className={`${children ? 'w-[calc(100vw-10px)]' : 'w-full'} md:w-full ${
         variant === 'primary' ? 'text-white' : 'bg-card'
-      } rounded-[20px] px-[10px] py-[10px] lg:px-[20px] lg:py-[15px]`}
+      } rounded-[20px] lg:px-[20px] lg:py-[15px]`}
     >
       <div
         className={`${children ? 'flex items-center justify-between gap-2' : ''} lg:block`}
       >
-        <div className={children ? 'pl-[5px] py-[10px] lg:pl-0' : ''}>
-          <div className="flex justify-between items-start mb-4 mt-2 lg:mt-0 lg:mt-6">
+        {openModal && <InfoModal onOpenChange={setModalOpen} />}
+        <div className={children ? 'pl-[10px] py-[10px] lg:pl-0 lg:py-0' : ''}>
+          <div className="flex justify-between items-start mb-2 mt-0 lg:mt-0 lg:mt-6">
             <h3 className="text-[10px] lg:text-xs font-mono font-[500]">
               {title}
               {percentage && (
                 <span className="ml-2 text-[#39C412]">{percentage}</span>
               )}
             </h3>
-            {variant === 'primary' && <Icon fill={'#FFFFFF'} name={'info'} />}
+            {variant === 'primary' && (
+              <div
+                onMouseEnter={() => setTimeout(() => setModalOpen(true), 500)}
+                onMouseLeave={() => setTimeout(() => setModalOpen(false), 2000)}
+                className="relative"
+              >
+                <Icon fill={'#FFFFFF'} name={'info'} />
+              </div>
+            )}
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-0 md:space-y-2">
             <div className="flex items-center justify-between">
               <div className="flex items-baseline space-x-2">
                 <div className="text-[21px] lg:text-5xl font-bold">

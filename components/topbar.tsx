@@ -68,10 +68,10 @@ export function Topbar() {
     <div
       style={{
         position: 'fixed',
-        width: '99%',
+        top: '5px',
         zIndex: 9,
       }}
-      className="h-16 border-b bg-[#FFFFFF] px-[30px] py-[10px] rounded-[20px] border border-[#EFF3F4] mx-[10px]"
+      className="w-[calc(100vw-20px)] mx-[10px] h-16 border-b bg-[#FFFFFF] px-[30px] py-[10px] rounded-[20px] border border-[#EFF3F4]"
     >
       <div className="w-full h-full flex items-center justify-between">
         <img className="hidden sm:block" src={'/logo.svg'} alt="logoo" />
