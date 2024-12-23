@@ -18,7 +18,7 @@ export function RewardValue({
       style={{
         color: variant === 'primary' ? '#FFFFFFBF' : '#000000BF',
       }}
-      className="flex space-x-1 lg:space-x-2 font-mono text-[10px] lg:text-xs"
+      className="flex justify-between space-x-1 lg:space-x-2 font-mono text-[10px] lg:text-xs"
     >
       <div className="flex xl:block 2xl:flex gap-1">
         <span className="whitespace-nowrap">{usdValue} USD </span>

@@ -44,7 +44,7 @@ export function RewardsCard({
       >
         {openModal && <InfoModal onOpenChange={setModalOpen} />}
         <div className={children ? 'pl-[10px] py-[10px] lg:pl-0 lg:py-0' : ''}>
-          <div className="flex justify-between items-start mb-2 mt-0 lg:mt-0 lg:mt-6">
+          <div className="flex justify-between items-start mb-2 mt-0">
             <h3 className="text-[10px] lg:text-xs font-mono font-[500]">
               {title}
               {percentage && (
