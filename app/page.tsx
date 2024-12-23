@@ -83,7 +83,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 gap-[5px] lg:gap-6">
         <PortfolioValue value="$142,560.32" />
         <StakeCard title="Stake CSPR" />
       </div>
