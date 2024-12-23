@@ -7,6 +7,7 @@ import useWalletLogin from '@/hooks/useWalletLogin';
 import { useState } from 'react';
 import { useAuthStore } from '@/lib/store/use-store';
 import { formatWallet } from '@/lib/utils';
+import Link from 'next/link';
 
 export function Topbar() {
   const [walletLoading, setWalletLoading] = useState(false);
@@ -74,8 +75,12 @@ export function Topbar() {
       className="w-[calc(100vw-20px)] mx-[10px] h-16 border-b bg-[#FFFFFF] px-[30px] py-[10px] rounded-[20px] border border-[#EFF3F4]"
     >
       <div className="w-full h-full flex items-center justify-between">
-        <img className="hidden sm:block" src={'/logo.svg'} alt="logoo" />
-        <img className="block sm:hidden" src={'/logosm.svg'} alt="logoo" />
+        <Link href={'/'}>
+          <img className="hidden sm:block" src={'/logo.svg'} alt="logoo" />
+        </Link>
+        <Link href={'/'}>
+          <img className="block sm:hidden" src={'/logosm.svg'} alt="logoo" />
+        </Link>
         <div className="flex items-center space-x-2">
           <Button
             onClick={token ? handleDisconnect : handleWalletConnect}

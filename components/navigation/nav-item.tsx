@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Icon from '../Icon';
 
@@ -20,10 +19,9 @@ export function NavItem({
 }: NavItemProps) {
   const getItem = () => {
     return (
-      <div
+      <a
         className={cn(
-          'flex font-semibold text-[14px] items-center space-x-3 px-[30px] py-2 rounded-lg mb-1 group',
-          'hover:bg-primary/5',
+          'flex font-semibold text-[14px] items-center space-x-3 px-[30px] py-2 rounded-lg mb-1 group hover:bg-primary/5',
           disabled ? 'cursor-not-allowed' : '',
         )}
       >
@@ -34,7 +32,7 @@ export function NavItem({
             {badge}
           </span>
         )}
-      </div>
+      </a>
     );
   };
 
@@ -42,6 +40,8 @@ export function NavItem({
     getItem()
   ) : (
     <Link
+      legacyBehavior
+      passHref
       href={href}
       style={{
         color: isActive ? '#0B63FF' : '#000000',
