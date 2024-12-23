@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import Icon from '../Icon';
+import { useRouter } from 'next/navigation';
 
 interface NavItemProps {
   href: string;
@@ -17,37 +18,28 @@ export function NavItem({
   badge,
   isActive,
 }: NavItemProps) {
-  const getItem = () => {
-    return (
-      <a
-        className={cn(
-          'flex font-semibold text-[14px] items-center space-x-3 px-[30px] py-2 rounded-lg mb-1 group hover:bg-primary/5',
-          disabled ? 'cursor-not-allowed' : '',
-        )}
-      >
-        <Icon fill={isActive ? '#0B63FF' : '#000000'} name={name} />
-        <span>{name}</span>
-        {badge && (
-          <span className="ml-auto text-[10px] leading-tight bg-blue-100 text-blue-600 px-[8px] py-[5px] rounded-[5px] font-mono font-medium">
-            {badge}
-          </span>
-        )}
-      </a>
-    );
-  };
+  const router = useRouter();
 
-  return disabled ? (
-    getItem()
-  ) : (
-    <Link
-      legacyBehavior
-      passHref
-      href={href}
+  return (
+    <div
       style={{
         color: isActive ? '#0B63FF' : '#000000',
       }}
+      className={cn(
+        'flex font-semibold text-[14px] items-center space-x-3 px-[30px] py-2 rounded-lg mb-1 group hover:bg-primary/5',
+        disabled ? 'cursor-not-allowed' : 'cursor-pointer',
+      )}
+      onClick={() => {
+        if (!disabled) router.push(href);
+      }}
     >
-      {getItem()}
-    </Link>
+      <Icon fill={isActive ? '#0B63FF' : '#000000'} name={name} />
+      <span>{name}</span>
+      {badge && (
+        <span className="ml-auto text-[10px] leading-tight bg-blue-100 text-blue-600 px-[8px] py-[5px] rounded-[5px] font-mono font-medium">
+          {badge}
+        </span>
+      )}
+    </div>
   );
 }
