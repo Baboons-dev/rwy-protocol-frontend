@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 
 export function StakeStats() {
   return (
-    <div className="mx-[20px] my-[10px] p-[5px] lg:p-[10px] border border-[#EBEDED] rounded-[10px] grid grid-cols-2 gap-6">
+    <div className="mx-[5px] lg:mx-[20px] my-[10px] p-[5px] lg:p-[10px] border border-[#EBEDED] rounded-[10px] grid grid-cols-2 gap-6">
       <div className="flex flex-col gap-2 py-[5px] px-[10px] lg:p-[10px]">
         <div className="flex items-center space-x-2">
           <h3 className="text-[9px] lg:text-xs font-mono font-semibold">

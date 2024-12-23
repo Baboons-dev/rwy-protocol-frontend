@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export function StakeForm() {
   return (
-    <Card className="my-[10px] mx-[20px] p-[5px] bg-[#F7F8F9] border border-[#EBEDED]">
+    <Card className=" mx-[5px] my-[10px] lg:mx-[20px] p-[5px] bg-[#F7F8F9] border border-[#EBEDED]">
       <Tabs
         defaultValue="stake"
         className="p-0 rounded-[10px] rounded-tr-[10px] bg-white"

@@ -10,8 +10,8 @@ import { UnstakingInfo } from '@/components/stake/unstaking-info';
 export default function StakePage() {
   return (
     <div className="px-[5px] py-[20px] lg:px-[60px] lg:py-[40px]">
-      <StakeHeader title="Stake & Covnert" />
-      <div className="max-w-[590px] mx-auto my-[20px] bg-[#ffffff] rounded-[15px]">
+      <StakeHeader title="Stake & Convert" />
+      <div className="max-w-[590px] mx-auto my-[20px] bg-[#ffffff] rounded-[15px] border border-[#EBEDED]">
         <StakeOptions />
         <StakeStats />
         <StakeForm />
