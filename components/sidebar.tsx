@@ -8,8 +8,8 @@ const navigation = [
   { name: 'Stake', href: '/stake' },
   { name: 'Portfolio', href: '/portfolio' },
   { name: 'Farms', href: '/farms' },
-  { name: 'Nodes', href: '/nodes', badge: 'Soon' },
-  { name: 'Governance', href: '/governance', badge: 'Soon' },
+  { name: 'Nodes', href: '/nodes', badge: 'Soon', disabled: true },
+  { name: 'Governance', href: '/governance', badge: 'Soon', disabled: true },
 ];
 
 export function Sidebar() {
@@ -24,6 +24,7 @@ export function Sidebar() {
             href={item.href}
             name={item.name}
             badge={item.badge}
+            disabled={item.disabled}
             isActive={pathname === item.href}
           />
         ))}
