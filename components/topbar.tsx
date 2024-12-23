@@ -69,7 +69,7 @@ export function Topbar() {
       style={{
         position: 'fixed',
         top: '5px',
-        zIndex: 9,
+        zIndex: 20,
       }}
       className="w-[calc(100vw-20px)] mx-[10px] h-16 border-b bg-[#FFFFFF] px-[30px] py-[10px] rounded-[20px] border border-[#EFF3F4]"
     >
