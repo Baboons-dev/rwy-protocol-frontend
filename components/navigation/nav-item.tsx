@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import Icon from '../Icon';
+import { useRouter } from 'next/navigation';
 
 interface NavItemProps {
   href: string;
@@ -17,8 +18,18 @@ export function NavItem({
   badge,
   isActive,
 }: NavItemProps) {
+  const router = useRouter();
+
   return (
-    <Link href={href} passHref shallow>
+    <Link
+      href={href}
+      onClick={(e) => {
+        e.preventDefault();
+        router.push(href);
+      }}
+      passHref
+      shallow
+    >
       <div
         style={{
           color: isActive ? '#0B63FF' : '#000000',
