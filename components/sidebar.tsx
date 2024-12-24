@@ -2,11 +2,14 @@
 
 import { usePathname } from 'next/navigation';
 import { NavItem } from '@/components/navigation/nav-item';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useAuthStore } from '@/lib/store/use-store';
 
 export function Sidebar() {
   const { token } = useAuthStore();
+  const pathname = usePathname();
+  const [activeTab, setActiveTab] = useState<string>(pathname ?? '/');
+
   const navigation = useMemo(
     () => [
       { name: 'Dashboard', href: '/' },
@@ -36,7 +39,8 @@ export function Sidebar() {
               name={item.name}
               badge={item.badge}
               disabled={item.disabled}
-              // isActive={pathname === item.href}
+              isActive={activeTab === item.href}
+              setIsActive={setActiveTab}
             />
           ))}
       </nav>
