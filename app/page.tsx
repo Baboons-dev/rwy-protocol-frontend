@@ -6,7 +6,6 @@ import { StakeCard } from '@/components/stake-card';
 import { PortfolioChart } from '@/components/portfolio-chart';
 import { useState } from 'react';
 import { HistoryModal } from '@/components/historyModal';
-import { InfoModal } from '@/components/infoModal';
 
 export default function Dashboard() {
   const [openModal, setModalOpen] = useState(false);
