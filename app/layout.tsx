@@ -47,7 +47,7 @@ export default function RootLayout({
               >
                 <Topbar />
                 <div className="flex mt-[10px] pt-[4rem]">
-                  <div className="hidden lg:block fixed top-[5rem] left-[10px] bottom-0 w-[260px] bg-white">
+                  <div className="fixed top-[5rem] left-[10px] bottom-0 w-[260px] bg-white">
                     <Sidebar />
                   </div>
                   <main
