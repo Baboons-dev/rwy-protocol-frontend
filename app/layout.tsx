@@ -42,12 +42,12 @@ export default function RootLayout({
           <ContextComp>
             <CasperProvider>
               <div
-                className={`Layout_file min-h-screen overflow-y-hidden my-[5px]`}
+                className="Layout_file min-h-screen overflow-hidden my-[5px]"
                 id="root"
               >
                 <Topbar />
                 <div className="flex mt-[10px] pt-[4rem]">
-                  <div className="fixed top-[5rem] left-[10px] bottom-0 w-[260px] bg-white">
+                  <div className="hidden lg:block fixed top-[5rem] left-[10px] bottom-0 w-[260px] bg-white">
                     <Sidebar />
                   </div>
                   <main
