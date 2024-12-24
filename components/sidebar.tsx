@@ -25,7 +25,7 @@ export function Sidebar() {
             name={item.name}
             badge={item.badge}
             disabled={item.disabled}
-            isActive={pathname === item.href}
+            // isActive={pathname === item.href}
           />
         ))}
       </nav>
