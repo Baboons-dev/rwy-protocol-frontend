@@ -15,17 +15,14 @@ export function NavItem({ href, name, disabled, badge }: NavItemProps) {
   const pathname = usePathname();
 
   return (
-    <Link
-      href={disabled ? '#' : href}
-      passHref
-      className={cn(
-        'flex font-semibold text-[14px] items-center space-x-3 px-[30px] py-2 rounded-lg mb-1 group hover:bg-primary/5',
-        disabled ? 'cursor-not-allowed' : 'cursor-pointer',
-      )}
-    >
+    <Link href={disabled ? '#' : href} passHref>
       <div
+        className={cn(
+          'flex font-semibold text-[14px] items-center space-x-3 px-[30px] py-2 rounded-lg mb-1 group hover:bg-primary/5',
+          disabled ? 'cursor-not-allowed' : 'cursor-pointer',
+        )}
         style={{
-          color: pathname === href ? '#0B63FF' : '#000000',
+          color: disabled ? 'gray' : pathname === href ? '#0B63FF' : '#000000',
         }}
       >
         <Icon fill={pathname === href ? '#0B63FF' : '#000000'} name={name} />
