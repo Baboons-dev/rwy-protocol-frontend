@@ -16,13 +16,13 @@ export function Sidebar() {
       { name: 'Stake', href: '/stake', hide: !token },
       { name: 'Portfolio', href: '/portfolio', hide: !token },
       { name: 'Farms', href: '/farms' },
-      { name: 'Nodes', href: '/nodes', badge: 'Soon', disabled: true },
-      {
-        name: 'Governance',
-        href: '/governance',
-        badge: 'Soon',
-        disabled: true,
-      },
+      // { name: 'Nodes', href: '/nodes', badge: 'Soon', disabled: true },
+      // {
+      //   name: 'Governance',
+      //   href: '/governance',
+      //   badge: 'Soon',
+      //   disabled: true,
+      // },
     ],
     [token],
   );
@@ -37,8 +37,8 @@ export function Sidebar() {
               key={item.name}
               href={item.href}
               name={item.name}
-              badge={item.badge}
-              disabled={item.disabled}
+              // badge={item.badge}
+              // disabled={item.disabled}
               isActive={activeTab === item.href}
               setIsActive={setActiveTab}
             />

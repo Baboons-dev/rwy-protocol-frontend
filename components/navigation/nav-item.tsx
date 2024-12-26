@@ -23,7 +23,7 @@ export function NavItem({
 }: NavItemProps) {
   return (
     <Link
-      href={disabled ? '#' : href}
+      href={href}
       passHref
       onClick={() => {
         if (!disabled) setIsActive(href);
