@@ -28,7 +28,7 @@ export function Sidebar() {
   );
 
   return (
-    <div className="flex flex-col py-[50px] w-64 border border-[#EFF3F4] rounded-[20px] bg-card min-h-[calc(97vh-4rem)]">
+    <div className="hidden lg:flex fixed top-[5rem] left-[10px] bottom-0 w-[260px] flex-col py-[50px] w-64 border border-[#EFF3F4] rounded-[20px] bg-card min-h-[calc(97vh-4rem)]">
       <nav className="flex-1 px-2">
         {navigation
           .filter(({ hide }) => !hide)
