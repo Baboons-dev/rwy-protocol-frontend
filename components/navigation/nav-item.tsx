@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
-import Icon from '../Icon';
-import { usePathname } from 'next/navigation';
+// import Icon from '../Icon';
+// import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import Link from 'next/link';
 
