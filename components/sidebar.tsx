@@ -7,8 +7,8 @@ import { useAuthStore } from '@/lib/store/use-store';
 
 export function Sidebar() {
   const { token } = useAuthStore();
-  const pathname = usePathname();
-  const [activeTab, setActiveTab] = useState<string>(pathname ?? '/');
+  // const pathname = usePathname();
+  // const [activeTab, setActiveTab] = useState<string>(pathname ?? '/');
 
   const navigation = useMemo(
     () => [
@@ -38,9 +38,9 @@ export function Sidebar() {
               href={item.href}
               name={item.name}
               badge={item.badge}
-              disabled={item.disabled}
-              isActive={activeTab === item.href}
-              setIsActive={setActiveTab}
+              // disabled={item.disabled}
+              // isActive={activeTab === item.href}
+              // setIsActive={setActiveTab}
             />
           ))}
       </nav>
