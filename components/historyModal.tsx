@@ -18,7 +18,7 @@ export function HistoryModal({ onOpenChange }: ParticipationModalProps) {
         style={{
           borderRadius: '20px',
         }}
-        className="w-full px-[30px] py-[20px] max-w-[600px] h-[400px]"
+        className="w-full px-[30px] py-[20px] max-w-[600px] h-[400px] cursor-pointer"
       >
         <DialogHeader className="">
           <DialogTitle className="flex items-center justify-between text-[24px] font-bold">

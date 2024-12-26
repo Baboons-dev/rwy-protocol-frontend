@@ -11,7 +11,7 @@ export default function Dashboard() {
   const [openModal, setModalOpen] = useState(false);
 
   return (
-    <div className="px-[5px] py-[10px] lg:px-[60px] lg:py-[30px] space-y-2 lg:space-y-6">
+    <div className="py-0 lg:py-[10px] space-y-2 lg:space-y-6">
       <div className="w-[calc(100vw-10px)] md:w-full flex items-center gap-2">
         <div className="w-full xl:w-3/5">
           <p className="hidden lg:block text-xs px-[20px]  mb-2 font-semibold text-[#00000059] font-mono">

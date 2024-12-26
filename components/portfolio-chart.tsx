@@ -33,7 +33,7 @@ export function PortfolioChart() {
   const data = generateDummyData(selectedRange.days);
 
   return (
-    <Card className="p-[10px]">
+    <Card className="p-[10px] rounded-[20px]">
       <div className="flex justify-between items-center mb-6">
         <div className="flex space-x-1 lg:space-x-2 border border-[#EBEDED] rounded-[10px] p-[5px]">
           {timeRanges.map((range) => (
