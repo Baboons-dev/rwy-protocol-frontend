@@ -14,7 +14,7 @@ export function InfoModal({ onOpenChange }: ParticipationModalProps) {
         style={{
           borderRadius: '10px',
         }}
-        className="w-full left-[45%] top-[35%] p-[14px] max-w-[250px] h-[80px]"
+        className="w-full left-[35%] top-[8%] lg:top-[14%] lg:left-[44%] xl:top-[16%] p-[14px] max-w-[250px] h-[80px]"
       >
         <p className="h-[56px] text-[10px] text-[#000000BF] leading-[14px] font-mono">
           Whatever here lorem ipsum dolor sit amet, consectetur adipiscing elit,
