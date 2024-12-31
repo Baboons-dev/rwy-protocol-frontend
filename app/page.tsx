@@ -40,7 +40,7 @@ export default function Dashboard() {
         <div className="w-[50xp] lg:mt-6">
           <div
             onClick={() => setModalOpen(true)}
-            className="rounded-[10px] border border-[#EBEDED] bg-[#FFFFFF] w-[40px] md:w-[50px] h-[40px] md:h-[50px] py-3 md:py-4 flex flex-col items-center"
+            className="rounded-[10px] border cursor-pointer border-[#EBEDED] bg-[#FFFFFF] w-[40px] md:w-[50px] h-[40px] md:h-[50px] py-3 md:py-4 flex flex-col items-center"
           >
             <img src="/box.svg" alt="boox" />
           </div>
